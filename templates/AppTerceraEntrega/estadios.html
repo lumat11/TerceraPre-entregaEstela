@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block cambio7 %}
+    {% for estadio in estadios %}
+        <h2>{{estadio.estadio}}</h2>
+        <p class="lead mb-0">
+            El estadio es {{estadio.estadio}}
+        </p>
+        <hr>
+    {%  endfor %}
+
+{% endblock %}

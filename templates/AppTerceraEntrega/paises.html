@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block cambio3 %}
+<div>
+    <form action="/app/buscar" method="GET">
+
+        {{ fomr.as_p }}
+
+        <input type="text" name="pais" placeholder="buscar"/>
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+    {% for pais in paises %}
+        <h2>{{pais.pais}}</h2>
+        <p class="lead mb-0">
+            El pais es {{pais.pais}} del continente {{pais.continente}}
+        </p>
+        <hr>
+    {%  endfor %}
+
+{% endblock %}

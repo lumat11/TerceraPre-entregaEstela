@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block cambio5 %}
+    {% for equipo in equipos %}
+        <h2>{{equipo.equipo}}</h2>
+        <p class="lead mb-0">
+            El esquipo es {{equipo.equipo}} de la Liga {{equipo.liga}}
+        </p>
+        <hr>
+    {%  endfor %}
+
+{% endblock %}
