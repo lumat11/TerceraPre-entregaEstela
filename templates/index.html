@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
-{% block cambio %}
-
+{% block cambio1 %}
+ {% for pais in paises %}
+    {% if pais %}
+      <p>El Pais es {{pais.pais}}</p>
+    {% else %}
+       No hay paises
+    {% endif %}
+ {%  endfor %}
 {% endblock %}
