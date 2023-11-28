@@ -1,7 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from AppTerceraEntrega.models import Pais, Equipo, Estadio
-<<<<<<< HEAD
 from AppTerceraEntrega.forms import PaisForm, BusquedaPaisForm, EquipoForm, EstadioForm
 
 
@@ -28,10 +27,6 @@ def mostrar_estadios(request):
         "form": BusquedaPaisForm()
     }
     return render(request, "AppTerceraEntrega/estadios.html", contexto)
-=======
-from AppTerceraEntrega.forms import PaisForm, BusquedaPaisForm
->>>>>>> a0e8d31d9f18fd347ffc70095e488d6848c4ed2e
-
 
 def mostrar_paises(request):
     paises = Pais.objects.all()
